@@ -1,0 +1,17 @@
+<mapper namespace="test">
+    <select id="queryUserByParams"
+            resultType="pojo.User"
+            statementType="prepared">
+
+        SELECT * FROM user WHERE sex = #{sex} AND username like '%${username}'
+        <!-- SELECT * FROM user WHERE id = #{id} AND username like '%${username}' -->
+
+        <!-- and sex = #{sex} AND username like '%${username}' -->
+        <if test="username != null and username !='' ">
+            AND username like '%${username}'
+            <if test="username != null and username !=''">
+                AND 1=1
+            </if>
+        </if>
+    </select>
+</mapper>
