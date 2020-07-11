@@ -19,14 +19,12 @@ public class DynamicSqlSource implements SqlSource {
         DynamicContext context = new DynamicContext(param);
         rootSqlNode.apply(context);
         String sqlText = context.getSql();
-        System.out.println("#{}未处理的SQL语句："+sqlText);
 
 
         ParameterMappingTokenHandler tokenHandler = new ParameterMappingTokenHandler();
         GenericTokenParser tokenParser = new GenericTokenParser("#{","}",tokenHandler);
 
         String sql = tokenParser.parse(sqlText);
-        System.out.println("#{}处理之后的SQL语句："+sql);
 
 
         return new BoundSql(sql, tokenHandler.getParameterMappings());

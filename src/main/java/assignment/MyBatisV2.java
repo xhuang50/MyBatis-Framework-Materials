@@ -24,6 +24,7 @@ import java.lang.reflect.Field;
 import java.sql.*;
 import java.util.*;
 
+
 public class MyBatisV2 {
 
     private Configuration configuration = new Configuration();
@@ -35,8 +36,8 @@ public class MyBatisV2 {
         loadXML("mybatis-config.xml");
 
         Map params = new HashMap();
-        params.put("username","王五");
-        params.put("sex","男");
+//        params.put("username","Catie");
+        params.put("gender","female");
 
         List<User> users = selectList("test.queryUserByParams", params);
         System.out.println(users);

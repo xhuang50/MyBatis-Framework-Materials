@@ -16,7 +16,7 @@ public class JdbcDemo {
             connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/kkb", "root", "root");
             String sql = "select address from user where username = ?";
             statement = connection.prepareStatement(sql);
-            statement.setString(1, "王五");
+            statement.setString(1, "Catie");
             resultSet = statement.executeQuery();
 
             while(resultSet.next()){

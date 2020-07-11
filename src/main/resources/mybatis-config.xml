@@ -4,11 +4,11 @@
         <environment id="dev">
             <!-- 配置数据源信息 -->
             <dataSource type="DBCP">
-                <property name="db.password" value="kkb111111"></property>
+                <property name="db.password" value="root"></property>
                 <property name="db.driver" value="com.mysql.jdbc.Driver"></property>
                 <property name="db.url"
-                          value="jdbc:mysql://127.0.0.1:3306/kkb"></property>
-                <property name="db.username" value="kkb"></property>
+                          value="jdbc:mysql://localhost:3306/enhancement"></property>
+                <property name="db.username" value="root"></property>
             </dataSource>
         </environment>
     </environments>

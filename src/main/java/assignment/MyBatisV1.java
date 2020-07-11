@@ -18,11 +18,11 @@ public class MyBatisV1 {
         loadProperties("jdbc.properties");
         List<User> users1 = selectList("queryUserById", 1);
         System.out.println("by id: " + users1);
-        List<User> users2 = selectList("queryUserByName", "王五");
+        List<User> users2 = selectList("queryUserByName", "Catie");
         System.out.println("by name: " + users2);
         Map params = new HashMap();
-        params.put("username", "王五");
-        params.put("sex", "男");
+        params.put("username", "Catie");
+        params.put("gender", "female");
         List<User> users3 = selectList("queryUserByParams", params);
         System.out.println(users3);
 
